@@ -1,0 +1,659 @@
+@charset "UTF-8";
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+header .navbar-wrapper .search button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+.page-content-header {
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: cover;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  min-width: 320px;
+  padding: 0 15px;
+}
+
+a {
+  color: #777777;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 6px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 6px;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: #000000;
+}
+
+h4 {
+  text-transform: uppercase;
+  color: #777777;
+  margin: 60px 0 35px;
+}
+
+li {
+  list-style: none;
+}
+
+header .navbar-wrapper .search button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+.page-content-header {
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: cover;
+}
+
+header .navbar-wrapper .main-menu li:last-child, header .sub-header .sub-header-wrapper .right ul li:last-child {
+  margin: 0 0 0 0;
+}
+
+header .navbar-wrapper .search, header .navbar-wrapper .right, header .navbar-wrapper, header .sub-header .sub-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .sub-header {
+  color: #777777;
+  background-color: #333333;
+  padding: 10px 0;
+}
+header .sub-header .sub-header-wrapper {
+  font-size: 14px;
+}
+header .sub-header .sub-header-wrapper .right ul {
+  display: flex;
+}
+header .sub-header .sub-header-wrapper .right ul li {
+  list-style: none;
+  margin: 0 20px 0 0;
+}
+header .navbar-wrapper {
+  padding: 30px 0;
+}
+header .navbar-wrapper .main-menu {
+  display: flex;
+  margin-right: 40px;
+}
+header .navbar-wrapper .main-menu li {
+  margin: 0 30px 0 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header .navbar-wrapper .main-menu li a {
+  color: #000000;
+}
+header .navbar-wrapper .main-menu li:hover a {
+  color: #00c8c8;
+}
+header .navbar-wrapper .search {
+  position: relative;
+}
+header .navbar-wrapper .search input {
+  z-index: 1;
+  border: 1px solid rgba(119, 119, 119, 0.3);
+  box-shadow: none;
+  outline: none;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #777777;
+}
+header .navbar-wrapper .search button {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  cursor: pointer;
+}
+
+header .navbar-wrapper .search button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+.page-content-header {
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: cover;
+}
+
+.page-content-header {
+  background-image: url("../images/intro-bg.jpg");
+  padding: 100px 0;
+}
+.page-content-header .content-wrapper {
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.wapper-view {
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0;
+}
+.wapper-view div {
+  display: flex;
+  flex-direction: column;
+}
+.wapper-view div:not(div:last-child) {
+  margin-right: 36px;
+}
+.wapper-view div h3 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.wapper-view div p {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #777777;
+}
+.wapper-view div a {
+  padding: 20px 30px;
+  border: 1px solid #737373;
+  max-width: 240px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+.wapper-view div a:hover {
+  color: #ffffff;
+  background-color: #00c8c8;
+  border-color: #00c8c8;
+}
+
+.location-wrapper {
+  margin-bottom: 125px;
+  display: flex;
+  justify-content: space-between;
+  height: 530px;
+}
+.location-wrapper .wrapper-maps {
+  background-image: url(../images/map.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.location-wrapper .contacts {
+  padding: 40px 50px 90px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  color: #777777;
+}
+.location-wrapper .contacts p {
+  font-size: 14px;
+}
+.location-wrapper .contacts .contacts-item-1 {
+  list-style: none;
+}
+.location-wrapper .contacts .contacts-item-1 li {
+  display: flex;
+  margin: 10px auto;
+  font-size: 14px;
+}
+.location-wrapper .contacts .contacts-item-1 li img {
+  margin-right: 10px;
+  height: 100%;
+}
+.location-wrapper .contacts .contacts-item-2 {
+  display: flex;
+  max-width: 200px;
+}
+.location-wrapper .contacts .contacts-item-2 li:hover {
+  color: #00c8c8;
+}
+.location-wrapper .contacts .contacts-item-2 img {
+  margin-right: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+header .navbar-wrapper .search button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+.page-content-header {
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: cover;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  min-width: 320px;
+  padding: 0 15px;
+}
+
+a {
+  color: #777777;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 6px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 6px;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: #000000;
+}
+
+h4 {
+  text-transform: uppercase;
+  color: #777777;
+  margin: 60px 0 35px;
+}
+
+li {
+  list-style: none;
+}
+
+footer {
+  background-color: #f8f8f8;
+}
+footer .wrapper-footer-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+footer .wrapper-footer-info li {
+  line-height: 30px;
+  font-size: 14px;
+}
+footer .wrapper-footer-info li a:hover {
+  color: #00c8c8;
+}
+footer .wrapper-footer-info li p {
+  color: #777777;
+  max-width: 200px;
+}
+footer .footer-blocks {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+footer .footer-blocks div {
+  max-width: 570px;
+  width: 100%;
+}
+footer .footer-blocks div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 200px;
+}
+footer .footer-blocks div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: #00c8c8;
+  text-align: center;
+  height: 200px;
+}
+footer .wrapper-down-footer {
+  background-color: #333333;
+  padding: 10px;
+}
+footer .wrapper-down-footer .wrapper-item {
+  display: flex;
+  justify-content: space-between;
+}
+footer .wrapper-down-footer .wrapper-item .item-footer-1 {
+  display: flex;
+  justify-content: center;
+  color: #777777;
+}
+footer .wrapper-down-footer .wrapper-item ul {
+  display: flex;
+}
+footer .wrapper-down-footer .wrapper-item ul li:not(li:last-child) {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 1050px) {
+  header .navbar-wrapper {
+    justify-content: space-around;
+  }
+  header .navbar-wrapper .right {
+    flex-direction: column;
+  }
+  header .navbar-wrapper .right ul {
+    margin-bottom: 20px;
+  }
+  header .navbar-wrapper .search {
+    margin-right: 40px;
+    width: 100%;
+  }
+  header .navbar-wrapper .search button img {
+    margin: 10px;
+  }
+  header .navbar-wrapper .search input {
+    width: 100%;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  header .navbar-wrapper {
+    flex-direction: column;
+  }
+  header .navbar-wrapper .left {
+    margin-bottom: 20px;
+  }
+  header .navbar-wrapper .right ul {
+    justify-content: space-around;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  header .navbar-wrapper .right ul li {
+    margin: 10px;
+  }
+  header .navbar-wrapper .right ul li:last-child {
+    margin-top: 10px;
+  }
+  header .navbar-wrapper .right .search {
+    width: 320px;
+    margin: 10px auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header .sub-header .sub-header-wrapper {
+    justify-content: space-around;
+  }
+
+  main .wapper-view {
+    flex-direction: column;
+    margin: 40px auto;
+  }
+  main .wapper-view div {
+    align-items: center;
+    margin: 20px auto;
+  }
+  main .wapper-view div:not(div:last-child) {
+    margin-right: 0px;
+  }
+  main .wapper-view div p {
+    text-align: center;
+    font-size: 20px;
+  }
+  main .wapper-view div a {
+    text-align: center;
+  }
+  main .location-wrapper {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+  main .location-wrapper .wrapper-maps {
+    height: 100%;
+  }
+  main .location-wrapper .contacts {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  footer .wrapper-down-footer {
+    padding: 0;
+  }
+  footer .wrapper-down-footer .wrapper-item {
+    flex-direction: column;
+  }
+  footer .wrapper-footer-info {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .wrapper-footer-info div {
+    max-width: 300px;
+    font-size: 30px;
+    width: 100%;
+  }
+  footer .wrapper-footer-info div li {
+    font-size: 20px;
+  }
+  footer .footer-blocks {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 20px auto;
+  }
+  footer .footer-blocks div {
+    margin: 20px auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
